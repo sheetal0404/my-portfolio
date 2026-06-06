@@ -78,9 +78,10 @@ textarea {
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.04em;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.06em;
+  color: var(--text);
 }
 
 .main-nav {
@@ -171,8 +172,19 @@ textarea {
 }
 
 .hero-image-block {
+  position: relative;
   display: grid;
   gap: 1.5rem;
+}
+
+.hero-image-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(18px, -18px);
+  background: rgba(110, 140, 255, 0.08);
+  border-radius: 32px;
+  z-index: 0;
 }
 
 .profile-photo {
@@ -180,9 +192,11 @@ textarea {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: var(--shadow);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
   min-height: 280px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-tag {
@@ -300,8 +314,40 @@ textarea {
 
 .service-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.75rem;
+  padding-top: 1.5rem;
+}
+
+.service-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.18);
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.section-copy {
+  max-width: 44rem;
+  color: var(--muted);
+  margin-top: 0.65rem;
+  line-height: 1.8;
 }
 
 .section-accent {
