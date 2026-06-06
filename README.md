@@ -7,6 +7,7 @@ A professional static portfolio website for a UI/UX designer.
 - `index.html` — main landing page
 - `assets/css/style.css` — styling for the site
 - `assets/js/main.js` — smooth scrolling behavior
+- `assets/images/profile.jpg` — place the profile photo here for the homepage
 
 ## Preview locally
 
